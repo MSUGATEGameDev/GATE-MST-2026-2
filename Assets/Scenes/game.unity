@@ -11161,7 +11161,7 @@ PrefabInstance:
     - target: {fileID: 1708576647234818529, guid: 6bcbd75a4bd4dba45802087238127d31, type: 3}
       propertyPath: 'dialog.Array.data[3]'
       value: 'But when I saw you fighting those enemies with that hopeful spark in
-        your eyes.... I snapped out of it. '
+        your eye... I snapped out of it. '
       objectReference: {fileID: 0}
     - target: {fileID: 1708576647234818529, guid: 6bcbd75a4bd4dba45802087238127d31, type: 3}
       propertyPath: 'dialog.Array.data[4]'
