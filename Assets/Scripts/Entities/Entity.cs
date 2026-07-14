@@ -73,9 +73,13 @@ public class Entity : MonoBehaviour
                 damageLightActive = false;
                 foreach (GameObject light in entityDamageLights)
                 {
-                    Renderer lightRenderer = light.GetComponent<Renderer>();
-                    lightRenderer.material.DisableKeyword("_EMISSION");
-                    lightRenderer.material.SetColor("_EmissionColor", Color.black);
+                    if (light != null)
+                    {
+                        Renderer lightRenderer = light.GetComponent<Renderer>();
+                        lightRenderer.material.DisableKeyword("_EMISSION");
+                        lightRenderer.material.SetColor("_EmissionColor", Color.black);
+                    }
+                    
                 }
             }
         }
@@ -268,6 +272,8 @@ public class Entity : MonoBehaviour
     {
         curState = EStates.dead;
         anim.enabled = false;
+        rigid.linearVelocity = Vector3.zero;
+        curDir = Vector2.zero;
     }
 
     public virtual void DetermineState()
